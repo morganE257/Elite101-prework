@@ -22,9 +22,32 @@ def user_selection():
     in_use = True
     user_choice = int(input("Enter a number 1-3: "))
     if user_choice == 1:
-        print("This is the first placeholder.")
+        print("Alright, you want to make a checking account.")
+        print("First, I want you to confirm just in case.")
+        confirm = input("Do you want to make a checking account? ")
+        if confirm == "Yes" or confirm == "yes":
+            print("Alright, lets continue!")
+            account_number = random.randint(1,1000)
+            print(f"Your account number is {account_number}.")
+        else:
+            print("Alright, please pick another option.")
+
+        account_pin_number = int(input("Okay, what is your pin for this account?"))
+        print(f"Okay, your pin number is {account_pin_number}")
+
     elif user_choice == 2:
-        print("This is the second placeholder.")
+        print("Savings.")
+        print("Alright, you want to make a savings account.")
+        print("First, I want you to confirm just in case.")
+        confirm = input("Do you want to make a savings account? ")
+        if confirm == "Yes" or confirm == "yes":
+            print("Alright, lets continue!")
+            account_number = random.randint(1,1000)
+            print(f"Your account number is {account_number}.")
+        else:
+            print("Alright, please pick another option.")
+        account_pin_number = int(input("Okay, what is your pin for this account?"))
+        print(f"Okay, your pin number is {account_pin_number} ")
     elif user_choice == 3:
         print("Exiting the program, thank you for visiting!")
         in_use = False
