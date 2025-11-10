@@ -37,29 +37,26 @@ def user_selection():
             print("Alright, lets continue!")
             account_number = random.randint(1,1000) #Assigns an account number for the user
             print(f"Your account number is {account_number}.")
+            #Takes in the users chosen pin number
+            account_pin_number = int(input("Okay, what is your pin for this account? "))
+            print(f"Okay, your pin number is {account_pin_number}")
+            #Checks if the user wants to continue with account
+            cont = input("Would you like to continue with your account? ")
+            if cont == "yes" or cont == "Yes":
+                #Will the user withdrawal or deposit an amount
+                money = input("Would you like to make a withdrawal or a deposit? ")
+                if money == "Withdrawal" or money == "withdrawal":
+                    #How much the user wants to withdrawal (Assume the money is in the account)
+                    withdrawal = int(input("Alright, how much would you like to take out? "))
+                    print(f"Okay, you have withdrawn ${withdrawal}")
+                elif money == "deposit" or money == "Deposit":
+                    #How much the user wants to deposit
+                    deposit = int(input("Okay, how much would you like to deposit? "))
+                    print(f"Okay, you have deposited ${deposit}.")
+                else:
+                    print("Have a good day!")
         else:
             print("Alright, please pick another option.")
-
-        #Takes in the users chosen pin number
-        account_pin_number = int(input("Okay, what is your pin for this account?" ))
-        print(f"Okay, your pin number is {account_pin_number}")
-        #Checks if the user wants to continue with account
-        cont = input("Would you like to continue with your account?" )
-        if cont == "yes" or cont == "Yes":
-            #Will the user withdrawal or deposit an amount
-            money = input("Would you like to make a withdrawal or a deposit? ")
-            if money == "Withdrawal" or money == "withdrawal":
-                #How much the user wants to withdrawal (Assume the money is in the account)
-                withdrawal = int(input("Alright, how much would you like to take out? "))
-                print(f"Okay, you have withdrawn ${withdrawal}")
-            elif money == "deposit" or money == "Deposit":
-                #How much the user wants to deposit
-                deposit = int(input("Okay, how much would you like to deposit?"))
-                print(f"Okay, you have deposited ${deposit}.")
-            else:
-                print("Have a good day!")
-        else:
-            print("Have a good day!")
 
     #user chooses option 2
     elif user_choice == 2:
@@ -71,23 +68,24 @@ def user_selection():
             print("Alright, lets continue!")
             account_number = random.randint(1,1000)
             print(f"Your account number is {account_number}.")
-        else:
-            print("Alright, please pick another option.")
-        account_pin_number = int(input("Okay, what is your pin for this account?" ))
-        print(f"Okay, your pin number is {account_pin_number} ")
-        cont = input("Would you like to continue with your account? ")
-        if cont == "yes" or cont == "Yes":
-            money = input("Would you like to make a withdrawal or a deposit? ")
-            if money == "Withdrawal" or money == "withdrawal":
-                withdrawal = int(input("Alright, how much would you like to take out? "))
-                print(f"Okay, you have withdrawn ${withdrawal}")
-            elif money == "deposit" or money == "Deposit":
-                deposit = int(input("Okay, how much would you like to deposit?"))
-                print(f"Okay, you have deposited ${deposit}.")
+            account_pin_number = int(input("Okay, what is your pin for this account?" ))
+            print(f"Okay, your pin number is {account_pin_number} ")
+            cont = input("Would you like to continue with your account? ")
+            if cont == "yes" or cont == "Yes":
+                money = input("Would you like to make a withdrawal or a deposit? ")
+                if money == "Withdrawal" or money == "withdrawal":
+                    withdrawal = int(input("Alright, how much would you like to take out? "))
+                    print(f"Okay, you have withdrawn ${withdrawal}")
+                elif money == "deposit" or money == "Deposit":
+                    deposit = int(input("Okay, how much would you like to deposit?"))
+                    print(f"Okay, you have deposited ${deposit}.")
+                else:
+                    print("Have a good day!")
             else:
                 print("Have a good day!")
         else:
-            print("Have a good day!")
+            print("Alright, please pick another option.")
+        
 
     #user chooses to exit program/option 3
     elif user_choice == 3:
